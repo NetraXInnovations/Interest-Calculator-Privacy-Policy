@@ -1,0 +1,322 @@
+/* Fresh, Clean Privacy Policy Design */
+:root {
+    /* Clean, professional color palette */
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --accent-color: #3b82f6;
+    --background-color: #ffffff;
+    --text-color: #1f2937;
+    --light-gray: #f9fafb;
+    --border-color: #e5e7eb;
+    --success-color: #10b981;
+    
+    /* Typography */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --font-heading: 'Inter', system-ui, sans-serif;
+    --font-size-base: 16px;
+    --line-height: 1.6;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height);
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing-md) 0;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Main Content */
+main {
+    padding: var(--spacing-xl) 0;
+}
+
+.policy-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.policy-header h1 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+}
+
+.last-updated {
+    font-size: 1rem;
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+/* Policy Content */
+.policy-content {
+    margin: 0 auto;
+}
+
+.policy-section {
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--accent-color);
+}
+
+.policy-section h2 {
+    font-family: var(--font-heading);
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+}
+
+.policy-section p {
+    margin-bottom: var(--spacing-sm);
+    font-size: 1rem;
+}
+
+.policy-section ul {
+    margin-left: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+.policy-section li {
+    margin-bottom: var(--spacing-xs);
+    font-size: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.policy-section li::before {
+    content: "✓";
+    color: var(--success-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+hr {
+    margin: var(--spacing-lg) 0;
+    border: none;
+    height: 1px;
+    background-color: var(--border-color);
+}
+
+.contact-section {
+    background-color: white;
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+}
+
+.contact-info {
+    display: grid;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.contact-item strong {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.contact-item span {
+    font-size: 1rem;
+    color: var(--text-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.contact-item span:hover {
+    background-color: var(--light-gray);
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-md) 0;
+    margin-top: var(--spacing-xl);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    :root {
+        --spacing-sm: 0.75rem;
+        --spacing-md: 1.25rem;
+        --spacing-lg: 1.5rem;
+        --spacing-xl: 2rem;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    header .container {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .policy-header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .policy-section h2 {
+        font-size: 1.25rem;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+    
+    main {
+        padding: var(--spacing-lg) 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .policy-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .policy-section {
+        padding: var(--spacing-sm);
+    }
+    
+    .last-updated {
+        font-size: 0.875rem;
+    }
+}
+
+/* Dark Mode */
+body.dark-mode {
+    --background-color: #111827;
+    --text-color: #f9fafb;
+    --light-gray: #1f2937;
+    --border-color: #374151;
+}
+
+.dark-mode header {
+    background-color: #1e40af;
+}
+
+.dark-mode .policy-header h1 {
+    color: #93c5fd;
+}
+
+.dark-mode .policy-section {
+    background-color: var(--light-gray);
+    border-left-color: #60a5fa;
+}
+
+.dark-mode .policy-section h2 {
+    color: #93c5fd;
+}
+
+.dark-mode .contact-section {
+    background-color: #1f2937;
+    border-color: #4b5563;
+}
+
+.dark-mode .contact-item strong {
+    color: #93c5fd;
+}
+
+.dark-mode footer {
+    background-color: #1e40af;
+}
+
+/* Focus styles for accessibility */
+a:focus,
+button:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+    header,
+    footer {
+        display: none;
+    }
+    
+    main {
+        padding: 0;
+    }
+    
+    .policy-header h1 {
+        font-size: 1.5rem;
+        color: #000;
+    }
+    
+    .policy-section {
+        background: transparent;
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+    
+    .policy-section h2 {
+        color: #000;
+    }
+}
